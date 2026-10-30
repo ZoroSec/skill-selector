@@ -36,6 +36,14 @@ Do not upload the ZIP in an ordinary chat and ask Claude to install it. Chat can
 
 The uploaded skill also syncs to Claude Code when you sign in with the same Claude account. Start a new Claude Code session after uploading.
 
+**Make Claude ask before each task:** Installing a skill alone does not make it run on every prompt. Open **Settings > Your Claude > Instructions** (or **Settings > Account > Instructions for Claude**) and add:
+
+```text
+Before starting a new substantive task, use the skill-selector skill to suggest relevant available skills and explain why each is useful. Wait for me to choose, remove, or add skills before starting. Do not repeat the selection for follow-up messages in the same task.
+```
+
+Start a new chat and test with: “Use skill-selector before creating a portfolio website.” Claude decides when to load skills, so automatic selection is not guaranteed. Claude web may present the choices as text; this skill does not install a custom interactive menu in Claude. You can reply with skill names and `continue`.
+
 ### Claude Code, OpenCode, Antigravity, or another terminal agent
 
 First download the repository:
