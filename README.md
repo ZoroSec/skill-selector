@@ -6,6 +6,14 @@ Works with agents that support the [Agent Skills format](https://agentskills.io/
 
 ## Install
 
+Open the [skill folder](https://github.com/ZoroSec/skill-selector/tree/main/skills/skill-selector) to inspect or install it in an Agent Skills-compatible harness.
+
+For Codex, use its bundled installer with this direct URL:
+
+```sh
+python "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-github.py" --url https://github.com/ZoroSec/skill-selector/tree/main/skills/skill-selector
+```
+
 Clone the repository:
 
 ```sh
@@ -44,6 +52,8 @@ Ask your agent:
 > Use skill-selector to review the skills for: build a portfolio website.
 
 Select the proposed skills or add skills that are available in your session. If no interactive menu is available, reply with choices such as `off frontend-design`, `add imagegen`, or `continue`.
+
+In hosts that support interactive chat surfaces, open **Browse and add skills** to search and select skills from the available catalog.
 
 Skill Selector offers per-task choices; it does not intercept every prompt, change global settings, or override higher-priority instructions. Available skills and selection controls vary by agent.
 
