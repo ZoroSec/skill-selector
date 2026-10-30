@@ -27,7 +27,7 @@ python "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-gi
 
 ### Claude web or Claude Desktop
 
-1. Download [skill-selector-claude.zip](https://github.com/ZoroSec/skill-selector/releases/download/v1.0.0/skill-selector-claude.zip).
+1. Download [skill-selector-claude.zip](https://github.com/ZoroSec/skill-selector/releases/download/v1.1.0/skill-selector-claude.zip).
 2. In Claude, open **Customize** (or **Plugins**) > **Skills**.
 3. Click **+** > **Create skill** > **Upload a skill**.
 4. Choose `skill-selector-claude.zip`, then turn it on.
@@ -42,7 +42,7 @@ The uploaded skill also syncs to Claude Code when you sign in with the same Clau
 Before starting a new substantive task, use the skill-selector skill to suggest relevant available skills and explain why each is useful. Wait for me to choose, remove, or add skills before starting. Do not repeat the selection for follow-up messages in the same task.
 ```
 
-Start a new chat and test with: “Use skill-selector before creating a portfolio website.” Claude decides when to load skills, so automatic selection is not guaranteed. Claude web may present the choices as text; this skill does not install a custom interactive menu in Claude. You can reply with skill names and `continue`.
+Start a new chat and test with: “Use skill-selector and show an interactive skill selection menu before creating a portfolio website.” Claude decides when to load skills and display interactive visuals, so the menu is not guaranteed. If the menu cannot submit choices to the conversation, copy the selected names into chat. If interactive visuals are unavailable, reply with skill names and `continue`.
 
 ### Claude Code, OpenCode, Antigravity, or another terminal agent
 
