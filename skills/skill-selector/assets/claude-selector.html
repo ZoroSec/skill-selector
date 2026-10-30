@@ -1,0 +1,36 @@
+<section id="skill-selector">
+  <h2>Choose skills</h2>
+  <p>Select skills for this task. Add another available skill by name.</p>
+  <div id="skills"></div>
+  <label for="additional">Add skill</label>
+  <input id="additional" placeholder="Skill name">
+  <button id="add" type="button">Add</button>
+  <button id="finish" type="button">Prepare selection</button>
+  <label for="result">Copy this selection into the chat</label>
+  <textarea id="result" rows="4" readonly></textarea>
+  <script>
+    // Replace this example with skills actually available in the current session.
+    const availableSkills = [];
+    const selections = new Map();
+    const list = document.getElementById('skills');
+    function addSkill(name, reason, checked) {
+      if (!name || selections.has(name)) return;
+      const label = document.createElement('label');
+      label.style.display = 'block';
+      const input = document.createElement('input');
+      input.type = 'checkbox'; input.checked = checked;
+      label.append(input, document.createTextNode(' ' + name + (reason ? ' — ' + reason : '')));
+      list.append(label); selections.set(name, input);
+    }
+    availableSkills.forEach(skill => addSkill(skill.name, skill.reason, true));
+    document.getElementById('add').addEventListener('click', () => {
+      const field = document.getElementById('additional');
+      addSkill(field.value.trim(), 'Verify availability before use', true); field.value = '';
+    });
+    document.getElementById('finish').addEventListener('click', () => {
+      const selected = [...selections].filter(([, input]) => input.checked).map(([name]) => name);
+      const excluded = [...selections].filter(([, input]) => !input.checked).map(([name]) => name);
+      document.getElementById('result').value = 'Use these skills: ' + (selected.join(', ') || 'none') + '. Skip: ' + (excluded.join(', ') || 'none') + '. Continue after verifying availability.';
+    });
+  </script>
+</section>
