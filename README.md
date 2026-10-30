@@ -27,10 +27,10 @@ python "$CODEX_HOME/skills/.system/skill-installer/scripts/install-skill-from-gi
 
 ### Claude web or Claude Desktop
 
-1. Download [skill-selector.zip](https://github.com/ZoroSec/skill-selector/releases/download/v1.0.0/skill-selector.zip).
+1. Download [skill-selector-claude.zip](https://github.com/ZoroSec/skill-selector/releases/download/v1.0.0/skill-selector-claude.zip).
 2. In Claude, open **Customize** (or **Plugins**) > **Skills**.
 3. Click **+** > **Create skill** > **Upload a skill**.
-4. Choose `skill-selector.zip`, then turn it on.
+4. Choose `skill-selector-claude.zip`, then turn it on.
 
 Do not upload the ZIP in an ordinary chat and ask Claude to install it. Chat cannot change your account settings. You must use the Skills page. If you do not see Skills, turn on **Code execution and file creation** in Claude Settings > Capabilities first.
 
